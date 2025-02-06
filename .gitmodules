@@ -22,9 +22,6 @@
 [submodule "lib/modules/sv_block_columns"]
 	path = lib/modules/sv_block_columns
 	url = ../module_sv_block_columns
-[submodule "lib/modules/sv_block_heading"]
-	path = lib/modules/sv_block_heading
-	url = ../module_sv_block_heading
 [submodule "lib/modules/sv_block_paragraph"]
 	path = lib/modules/sv_block_paragraph
 	url = ../module_sv_block_paragraph
