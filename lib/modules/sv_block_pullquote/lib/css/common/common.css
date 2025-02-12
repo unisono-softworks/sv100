@@ -1,0 +1,15 @@
+.wp-block-pullquote > cite {
+	grid-area: author;
+}
+.wp-block-pullquote > blockquote{
+	padding:0;
+	margin:0;
+}
+
+.wp-block-pullquote p,
+.wp-block-pullquote.is-style-solid-color blockquote p{
+	font-size: inherit;
+	line-height: inherit;
+	font-family: inherit;
+	color: inherit;
+}

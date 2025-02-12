@@ -1,0 +1,3 @@
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > :where(.is-reusable){
+	max-width: 100% !important;
+}

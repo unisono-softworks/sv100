@@ -1,0 +1,161 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	margin:0; /* Fix Inline Margin */
+}
+
+body:not(.admin-bar){
+	--wp-admin--admin-bar--height:0px;
+}
+
+*{
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+*:focus{
+	outline: none;
+}
+
+figure{
+	margin:0;
+}
+
+body #wpadminbar{
+	z-index: 10000;
+}
+#wp-toolbar {
+	display: flex;
+	max-height:100%;
+}
+
+@media ( min-width: 782px ) {
+	#wp-toolbar {
+		display: inherit;
+	}
+}
+
+.has-text-color a{
+	color: inherit;
+}
+
+/* Fix WP-Admin-Bar overlapping content on mobile */
+html #wpadminbar:not(:hover) {
+	overflow-x: auto;
+}
+@media screen and (max-width: 782px) {
+	html #wpadminbar {
+		overflow: hidden;
+	}
+}
+
+/* fix search fields in safari */
+input[type="search"]{
+	-webkit-appearance:none;
+}
+
+
+/* wp 5.5 fixes */
+/* fix for distored images */
+figure:not(.is-resized) img{
+	height:auto;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.wp-site-blocks button,
+.wp-site-blocks input[type="submit"]{
+	cursor:pointer;
+}
+
+/* global wides */
+.alignwide, /* Frontend */
+.wp-block[data-align="wide"], /* Gutenberg */
+.wp-block[data-align="wide"] > div[role="group"]{ /* Gutenberg Group Blocks */
+	width:100%;
+	max-width:var( --wp--custom--sv-wide-size );
+}
+
+.alignfull, /* Frontend */
+.wp-block[data-align="full"], /* Gutenberg */
+.editor-styles-wrapper .is-root-container div.wp-block[data-align="full"] > div.wp-block.wp-block-group{ /* Gutenberg Group Blocks */
+	width:100%;
+	max-width:100% !important;
+}
+
+/* prevent line-height change */
+sub{
+	vertical-align:bottom;
+}
+sup{
+	vertical-align:top;
+}
+
+/* Global Spacing */
+.wp-site-blocks > * > * > *:not(li):not(nav):not(.alignfull),
+.wp-site-blocks > * > * > .wp-block-group.alignfull{
+	padding-left: var(--wp--custom--sv-spacing);
+	padding-right: var(--wp--custom--sv-spacing);
+}
+
+.wp-site-blocks > * > * > *:not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(.is-style-wide):not(.wp-block-column):not(nav):not(.wp-block-navigation__container):not(.wp-block-navigation__responsive-dialog):not(.wp-block-navigation__responsive-container-content):not(.wp-block-navigation__container){
+	max-width:var( --wp--custom--sv-content-size );
+}
+
+.widget_block,
+.alignwide,
+.alignfull,
+.wp-site-blocks > * > div.wp-block-group > * {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* global wides */
+.alignwide, /* Frontend */
+.is-style-wide,
+.wp-block[data-align="wide"], /* Gutenberg */
+.wp-block[data-align="wide"] > *, /* Gutenberg */
+.wp-block[data-align="wide"] > div[role="group"]{ /* Gutenberg Group Blocks */
+	max-width:var( --wp--custom--sv-wide-size);
+}
+
+.alignfull, /* Frontend */
+.wp-block[data-align="full"], /* Gutenberg */
+.wp-block[data-align="full"] > *, /* Gutenberg */
+.is-root-container div.wp-block[data-align="full"] > div.wp-block.wp-block-group{ /* Gutenberg Group Blocks */
+	max-width: 100% !important;
+}
+
+html :where(.wp-block.is-reusable){
+	max-width:initial;
+}
+
+a img{
+	vertical-align:middle;
+	height:auto;
+}
+
+a, a:hover, a:focus{
+	text-decoration:none;
+	color:inherit;
+	cursor:pointer;
+}
+
+video{
+	max-width:100%;
+}
+
+.has-background:not(.wp-block-separator) {
+	padding: var(--wp--custom--sv-spacing);
+}

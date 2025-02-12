@@ -1,0 +1,4 @@
+.wp-block-preformatted{
+	overflow: auto;
+	max-height:600px;
+}

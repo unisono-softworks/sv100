@@ -1,0 +1,8 @@
+.wp-block-video{
+	line-height:0;
+}
+/* @todo: make this a setting */
+.wp-block-video figcaption{
+	text-align:center;
+	font-style: italic;
+}

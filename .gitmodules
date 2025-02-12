@@ -178,3 +178,7 @@
 [submodule "lib/modules/sv_block_woocommerce_cart_line_items"]
 	path = lib/modules/sv_block_woocommerce_cart_line_items
 	url = ../module_sv_block_woocommerce_cart_line_items
+[submodule "core"]
+	path = core
+	url = ../sv_core
+	branch = v10.000

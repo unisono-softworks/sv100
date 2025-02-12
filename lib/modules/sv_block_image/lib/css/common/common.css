@@ -1,0 +1,14 @@
+.wp-block-image{
+	overflow:hidden;
+}
+
+.wp-block-image.alignfull .wp-element-caption,
+.wp-block-image.alignleft .wp-element-caption,
+.wp-block-image.alignright .wp-element-caption{
+	padding-left: var(--wp--custom--sv-spacing);
+	padding-right: var(--wp--custom--sv-spacing);
+}
+
+.wp-block-image.alignright {
+	text-align: right;
+}

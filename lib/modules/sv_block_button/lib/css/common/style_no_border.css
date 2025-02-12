@@ -1,0 +1,3 @@
+.wp-block-button.is-style-no-border, .wp-block-button.is-style-no-border > *{
+	border:0 !important;
+}

@@ -1,0 +1,8 @@
+.wp-block-quote{
+	font-style:italic;
+
+	/* reset WP default styles */
+	border-left: 0;
+	margin: 0;
+	padding-left: 0;
+}

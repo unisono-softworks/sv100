@@ -1,0 +1,17 @@
+body .wc-block-components-product-image{
+	display:block;
+	position:relative;
+}
+body .wc-block-components-product-image a{
+	text-decoration:none;
+}
+body .wc-block-components-product-image .wc-block-components-product-sale-badge--align-left{
+	position:absolute;
+	top:0;
+	left:0;
+}
+body .wc-block-components-product-image img{
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}

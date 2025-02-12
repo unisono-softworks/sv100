@@ -1,0 +1,85 @@
+<?php
+	namespace sv100;
+
+	class sv_block_woocommerce_legacy_template extends init {
+		public function init() {
+			$this->set_module_title( __( 'Block: WooCommerce Legacy Template', 'sv100' ) )
+				->set_module_desc( __( 'Settings for Gutenberg Block', 'sv100' ) )
+				->register_scripts();
+
+			// override templates
+			add_filter( 'wc_get_template', array( $this, 'wc_get_template' ), 10, 5 );
+
+            // override template parts
+            add_filter( 'wc_get_template_part', array( $this, 'wc_get_template_part' ), 10, 4 );
+
+			// override comments template
+			add_filter( 'comments_template', array($this, 'comments_template'), 100 );
+
+			// add theme support flag
+			add_action( 'after_setup_theme', array( $this, 'add_theme_support' ) );
+
+			// remove theme support flag
+			add_action( 'wp', array( $this, 'remove_theme_support' ) );
+
+			return $this;
+		}
+		public function comments_template($theme_template){
+			if(!function_exists('is_product')){
+				return $theme_template;
+			}
+
+			if(!is_product()){
+				return $theme_template;
+			}
+
+			if ( is_file( $this->get_path( 'lib/tpl/frontend/single-product-reviews.php' ) ) ){
+				return $this->get_path( 'lib/tpl/frontend/single-product-reviews.php' );
+			}
+
+			return $theme_template;
+		}
+		public function wc_get_template( $located, $template_name, $args, $template_path, $default_path ) {
+			if ( is_file( $this->get_path( 'lib/tpl/frontend/' . $template_name ) ) ){
+				return $this->get_path( 'lib/tpl/frontend/' . $template_name );
+			}
+
+			return $located;
+		}
+        public function wc_get_template_part( $located, $template, $slug ) {
+            if ( is_file( $this->get_path( 'lib/tpl/frontend/' . $template . '-' . $slug . ".php" ) ) ){
+                return $this->get_path( 'lib/tpl/frontend/' . $template . '-' . $slug . ".php" );
+            }
+
+			return $located;
+        }
+
+		public function register_scripts(): \sv100\sv_block_woocommerce_legacy_template {
+			$this->get_script( 'single' )
+			     ->set_path( 'lib/css/common/common.css' );
+
+			return $this;
+		}
+		public function enqueue_scripts(): \sv100\sv_block_woocommerce_legacy_template {
+			if ( function_exists( 'is_product' ) && is_product() ) {
+				foreach($this->get_scripts() as $script){
+					$script->set_is_enqueued();
+				}
+			}
+
+			return $this;
+		}
+		public function add_theme_support() {
+			//@todo check if this is still valid
+			add_theme_support( 'woocommerce', array(
+				'thumbnail_image_width'             => intval(get_option( 'thumbnail_size_w', 255)),
+				'gallery_thumbnail_image_width'     => round(intval(get_option( 'thumbnail_size_w', 255)) / 4),
+				'single_image_width'                => intval(get_option( 'medium_size_w', 570)),
+			) );
+		}
+		public function remove_theme_support() {
+			remove_theme_support( 'wc-product-gallery-zoom' );
+			remove_theme_support( 'wc-product-gallery-lightbox' );
+			remove_theme_support( 'wc-product-gallery-slider' );
+		}
+	}

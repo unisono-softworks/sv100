@@ -1,0 +1,5 @@
+/* Fix too big image sizes */
+.wp-block-term-description figure, .wp-block-term-description img{
+	max-width:100%;
+	height:auto;
+}

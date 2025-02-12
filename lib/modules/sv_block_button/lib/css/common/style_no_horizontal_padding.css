@@ -1,0 +1,4 @@
+.wp-block-button.is-style-no-horizontal-padding, .wp-block-button.is-style-no-horizontal-padding > *{
+	padding-left:0 !important;
+	padding-right:0 !important;
+}

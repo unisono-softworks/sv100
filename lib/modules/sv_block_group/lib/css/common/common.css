@@ -1,0 +1,12 @@
+.wp-block-group {
+	clear:both;
+}
+.wp-block-group__inner-container{
+	width:100%;
+}
+
+@media (min-width: 1024px) {
+	.wp-block-group.is-layout-flex {
+		flex-wrap: nowrap;
+	}
+}

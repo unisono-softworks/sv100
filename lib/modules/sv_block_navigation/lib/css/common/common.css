@@ -1,0 +1,6 @@
+.wp-block-navigation > ul{
+	list-style-type:none;
+}
+.wp-block-navigation__responsive-container.is-menu-open {
+	z-index:10000000;
+}

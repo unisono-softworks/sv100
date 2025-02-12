@@ -1,0 +1,27 @@
+.wp-block-media-text.has-media-on-the-right:not(.has-background) .wp-block-media-text__content{
+	padding-left:0;
+}
+.wp-block-media-text.has-media-on-the-left:not(.has-background) .wp-block-media-text__content{
+	padding-right:0;
+}
+.wp-block-media-text.is-image-fill figure.wp-block-media-text__media img{
+	/*min-width:100%;
+	min-height:100%;
+	width:auto !important;
+	height:auto !important;*/
+	object-fit:cover;
+	max-width: 100% !important;
+	position:static !important;
+	margin:0 !important;
+}
+
+/* Remove Padding on Mobile when stacked */
+@media (max-width: 600px){
+	.wp-block-media-text.is-stacked-on-mobile:not(.has-background) .wp-block-media-text__content {
+		padding: 20px 0 0 0;
+	}
+}
+
+.wp-block-media-text .wp-block-media-text__content > p:last-child{
+	margin-bottom:0;
+}

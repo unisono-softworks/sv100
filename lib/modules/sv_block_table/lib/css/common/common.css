@@ -1,0 +1,18 @@
+.editor-styles-wrapper .wp-block-table,
+.wp-block-table {
+	overflow: hidden;
+}
+.editor-styles-wrapper .wp-block-table table,
+.wp-block-table table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.editor-styles-wrapper .wp-block-table.aligncenter,
+.wp-block-table.aligncenter{
+	max-width: fit-content !important;
+}
+
+.wp-block-table th{
+	text-align:left;
+}

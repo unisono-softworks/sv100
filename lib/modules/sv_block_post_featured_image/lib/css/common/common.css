@@ -1,0 +1,13 @@
+.wp-block-post-featured-image{
+	line-height:0;
+}
+.wp-block-post-featured-image img{
+	width:100%;
+	padding:0 !important;
+	max-width:100% !important;
+}
+/* Imagify Fix */
+.wp-block-post-featured-image picture img{
+	object-fit:inherit;
+	height:inherit;
+}

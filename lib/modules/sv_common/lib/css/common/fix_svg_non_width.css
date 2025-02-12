@@ -1,0 +1,4 @@
+body .wp-block-navigation-item__content img{
+	min-width:5px;
+	min-height:5px;
+}

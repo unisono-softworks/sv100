@@ -1,0 +1,30 @@
+.wp-block-post-featured-image {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.wp-block-post-featured-image.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-block-post-featured-image.alignright {
+	margin-left: auto;
+}
+
+.wp-block-post-featured-image.alignleft {
+	margin-right: auto;
+}
+
+.wp-block-post-featured-image a {
+	display: block;
+}
+
+.wp-block-post-featured-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.wp-block-post-featured-image.alignwide img, .wp-block-post-featured-image.alignfull img {
+	width: 100%;
+}

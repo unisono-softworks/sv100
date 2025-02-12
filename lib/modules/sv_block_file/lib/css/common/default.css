@@ -1,0 +1,20 @@
+.wp-block-file {
+	margin-bottom: 1.5em;
+}
+.wp-block-file.aligncenter {
+	text-align: center;
+}
+.wp-block-file.alignright {
+	/*rtl:ignore*/
+	text-align: right;
+}
+.wp-block-file a.wp-block-file__button {
+	text-decoration: none;
+}
+.wp-block-file a.wp-block-file__button:hover, .wp-block-file a.wp-block-file__button:visited, .wp-block-file a.wp-block-file__button:focus, .wp-block-file a.wp-block-file__button:active {
+	opacity: 0.85;
+	text-decoration: none;
+}
+.wp-block-file * + .wp-block-file__button {
+	margin-left: 0.75em;
+}
