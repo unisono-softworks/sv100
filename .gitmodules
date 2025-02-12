@@ -182,3 +182,7 @@
 	path = core
 	url = ../sv_core
 	branch = v10.000
+[submodule "lib/core_theme/core"]
+	path = lib/core_theme/core
+	url = ../sv_core
+	branch = v10.000
