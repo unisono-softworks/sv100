@@ -312,6 +312,7 @@ class init extends \sv_core\core {
 				&& $script->get_ID() != 'common'
 				&& $script->get_ID() != 'default'
 			){
+                // has_block - another indirect block detection
 				$script->set_deps(array($this->get_script($this->get_block_handle())->get_handle()));
 			}
 
