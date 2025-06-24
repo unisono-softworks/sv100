@@ -366,9 +366,12 @@
 			);
 		}
 		public function wp_print_styles() {
-			// Gutenberg: load Styles inline for Pagespeed purposes
-			wp_deregister_style( 'wp-block-library' );
-			wp_dequeue_style( 'wp-block-library' );
-			wp_dequeue_style( 'wp-block-library-theme' );
+			if(! is_admin() && ! wp_doing_ajax()){
+				// Gutenberg: load Styles inline for Pagespeed purposes
+				wp_deregister_style( 'wp-block-library' );
+				wp_dequeue_style( 'wp-block-library' );
+				wp_dequeue_style( 'wp-block-library-theme' );
+			}
+
 		}
 	}
