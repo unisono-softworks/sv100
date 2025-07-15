@@ -9,7 +9,8 @@
 		.wp-site-blocks input,
 		.wp-site-blocks select,
 		.wp-site-blocks textarea,
-		body.theme-sv100',
+		body.theme-sv100,
+		body.wp-theme-sv100',
 		array_merge(
 			$module->get_setting('font')->get_css_data('font-family'),
 			$module->get_setting('font_size')->get_css_data('font-size','','px'),
