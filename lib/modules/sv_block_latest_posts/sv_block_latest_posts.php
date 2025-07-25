@@ -17,7 +17,7 @@
 				->add_section( $this );
 		}
 		
-		protected function load_settings(): sv_block_latest_posts {
+		public function load_settings(): sv_block_latest_posts {
 			$this->get_setting( 'font' )
 				->set_title( __( 'Font Family', 'sv100' ) )
 				->set_description( __( 'Choose a font for your text.', 'sv100' ) )

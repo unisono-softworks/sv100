@@ -34,7 +34,7 @@
 
 			return $this;
 		}
-		protected function load_settings(): sv_block_button {
+		public function load_settings(): sv_block_button {
 			$this->get_setting( 'gap' )
 			     ->set_title( __( 'Gap', 'sv100' ) )
 			     ->set_description( __( 'Gap between Buttons', 'sv100' ) )

@@ -17,7 +17,7 @@
 				->add_section( $this );
 		}
 		
-		protected function load_settings(): sv_block_categories {
+		public function load_settings(): sv_block_categories {
 			$this->get_setting( 'font' )
 				->set_title( __( 'Font Family', 'sv100' ) )
 				->set_description( __( 'Choose a font for your text.', 'sv100' ) )

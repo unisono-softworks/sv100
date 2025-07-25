@@ -17,7 +17,7 @@
 				->add_section( $this );
 		}
 
-		protected function load_settings(): sv_block_gallery {
+		public function load_settings(): sv_block_gallery {
 			$this->get_setting( 'spacing' )
 				->set_title( __( 'Spacing', 'sv100' ) )
 				->load_type( 'number' );

@@ -16,7 +16,7 @@
 				->get_root()
 				->add_section( $this );
 		}
-		protected function load_settings(): sv_block_navigation_link {
+		public function load_settings(): sv_block_navigation_link {
 			// Navigation Item
 			$this->get_setting( 'font' )
 			     ->set_title( __( 'Font Family', 'sv100' ) )

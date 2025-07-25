@@ -17,7 +17,7 @@
 				->add_section( $this );
 		}
 
-		protected function load_settings(): sv_block_heading {
+		public function load_settings(): sv_block_heading {
 			$i = 1;
 			while ($i <= 6) {
 				$this->get_setting( 'h'.$i.'_hyphens' )

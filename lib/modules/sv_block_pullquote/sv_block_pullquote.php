@@ -17,7 +17,7 @@
 				->add_section( $this );
 		}
 		
-		protected function load_settings(): sv_block_pullquote {
+		public function load_settings(): sv_block_pullquote {
 			$this->get_setting( 'font' )
 				->set_title( __( 'Font Family', 'sv100' ) )
 				->set_description( __( 'Choose a font for your text.', 'sv100' ) )
@@ -62,7 +62,7 @@
 
 			return $this;
 		}
-		protected function load_settings_cite(): sv_block_pullquote {
+		public function load_settings_cite(): sv_block_pullquote {
 			$this->get_setting( 'cite_font' )
 				->set_title( __( 'Font Family', 'sv100' ) )
 				->set_description( __( 'Choose a font for your text.', 'sv100' ) )

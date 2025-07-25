@@ -20,7 +20,7 @@
 				add_filter('woocommerce_get_star_rating_html', array($this, 'woocommerce_get_star_rating_html'), 10, 3);
 			}
 		}
-		protected function load_settings(): sv_block_woocommerce_product_rating {
+		public function load_settings(): sv_block_woocommerce_product_rating {
 			$this->get_setting( 'margin' )
 				->set_title( __( 'Margin', 'sv100' ) )
 				->set_is_responsive(true)

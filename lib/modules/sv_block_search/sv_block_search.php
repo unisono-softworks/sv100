@@ -17,7 +17,7 @@
 				->add_section( $this );
 		}
 
-		protected function load_settings(): sv_block_search {
+		public function load_settings(): sv_block_search {
 			// Wrapper
 			$this->get_setting( 'background_color' )
 			     ->set_title( __( 'Background Color', 'sv100' ) )

@@ -33,7 +33,7 @@
 
 			return $title;
 		}
-		protected function load_settings(): sv_block_query_title {
+		public function load_settings(): sv_block_query_title {
 			$this->get_setting( 'font' )
 				->set_title( __( 'Font Family', 'sv100' ) )
 				->set_description( __( 'Choose a font for your text.', 'sv100' ) )

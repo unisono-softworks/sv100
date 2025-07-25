@@ -18,7 +18,7 @@
 
 			//add_action('init', array($this, 'enqueue_scripts'));
 		}
-		protected function load_settings(): sv_block_woocommerce_cart_line_items {
+		public function load_settings(): sv_block_woocommerce_cart_line_items {
 			$this->get_setting( 'font' )
 			     ->set_title( __( 'Font Family', 'sv100' ) )
 			     ->set_description( __( 'Choose a font for your text.', 'sv100' ) )

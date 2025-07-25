@@ -260,7 +260,7 @@ class init extends \sv_core\core {
 				$script->set_is_enqueued();
 		}
 	}
-	protected function load_settings(){
+	public function load_settings(){
 		return $this;
 	}
 	protected function register_scripts(){

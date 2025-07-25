@@ -17,7 +17,7 @@
 				->add_section( $this );
 		}
 
-		protected function load_settings(): sv_block_columns {
+		public function load_settings(): sv_block_columns {
 			$this->get_setting( 'stack_active' )
 				->set_title( __( 'Stack Columns', 'sv100' ) )
 				->set_description( __( 'You may want to stack Columns on narrow viewports.', 'sv100' ) )

@@ -17,7 +17,7 @@
 				->add_section( $this );
 		}
 
-		protected function load_settings(): sv_block_media_text {
+		public function load_settings(): sv_block_media_text {
 			$this->get_setting( 'stack_active' )
 				->set_title( __( 'Stack Media & Text', 'sv100' ) )
 				->set_description( __( 'You may want to stack Media & Text on narrow viewports.', 'sv100' ) )

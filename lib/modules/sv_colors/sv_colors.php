@@ -92,7 +92,7 @@ class sv_colors extends init {
 		return $this;
 	}
 	
-	protected function load_settings(): sv_colors {
+	public function load_settings(): sv_colors {
 		$this->get_setting( 'colors_palette' )->set_title( __( 'Color palette', 'sv100' ) )->load_type( 'group' );
 		
 		$this->get_setting( 'colors_palette' )->run_type()->add_child()->set_ID( 'entry_label' )->set_title( __( 'Name', 'sv100' ) )->set_description( __( 'Give your color a name.', 'sv100' ) )->load_type( 'text' );

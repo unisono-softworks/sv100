@@ -17,7 +17,7 @@
 				->add_section( $this );
 		}
 		
-		protected function load_settings(): sv_block_query {
+		public function load_settings(): sv_block_query {
 			$this->get_setting( 'margin' )
 				->set_title( __( 'Margin', 'sv100' ) )
 				->set_is_responsive(true)

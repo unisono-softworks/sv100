@@ -35,7 +35,7 @@
 
 			return $theme_json;
 		}
-		protected function load_settings(): sv_font_sizes {
+		public function load_settings(): sv_font_sizes {
 			$this->get_setting( 'font_sizes' )
 				 ->set_title( __( 'Font Sizes', 'sv100' ) )
 				 ->load_type( 'group' );

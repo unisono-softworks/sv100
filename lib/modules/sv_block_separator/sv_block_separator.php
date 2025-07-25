@@ -17,7 +17,7 @@
 				->add_section( $this );
 		}
 
-		protected function load_settings(): sv_block_separator {
+		public function load_settings(): sv_block_separator {
 			$this->get_setting( 'background_color' )
 			     ->set_title( __( 'Background Color', 'sv100' ) )
 			     ->set_is_responsive(true)

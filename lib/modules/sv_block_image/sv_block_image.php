@@ -15,7 +15,7 @@
 				->get_root()
 				->add_section( $this );
 		}
-		protected function load_settings(): sv_block_image {
+		public function load_settings(): sv_block_image {
 			$this->get_setting( 'margin' )
 				->set_title( __( 'Margin', 'sv100' ) )
 				->set_is_responsive(true)

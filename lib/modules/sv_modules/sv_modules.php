@@ -25,7 +25,7 @@
 
 			return $this;
 		}
-		protected function load_settings(): sv_modules {
+		public function load_settings(): sv_modules {
 			$this->get_setting( 'all_modules' )
 				 ->set_title( __( 'All modules', 'sv100' ) )
 				 ->set_description( __( 'Enable or disable all modules.', 'sv100' ) )

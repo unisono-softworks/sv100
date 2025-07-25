@@ -167,7 +167,7 @@
 			);
 		}
 		
-		protected function load_settings(): sv_common {
+		public function load_settings(): sv_common {
 			$breakpoints = $this->get_breakpoints();
 			// Breakpoints
 			$this->get_setting( 'breakpoint_mobile' )

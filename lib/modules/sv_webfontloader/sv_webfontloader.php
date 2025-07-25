@@ -94,7 +94,7 @@
 			return $this;
 		}
 		
-		protected function load_settings(): sv_webfontloader {
+		public function load_settings(): sv_webfontloader {
 			$this->get_setting( 'fonts' )
 				 ->set_title( __( 'Add a new font', 'sv100' ) )
 				 ->load_type( 'group' );
