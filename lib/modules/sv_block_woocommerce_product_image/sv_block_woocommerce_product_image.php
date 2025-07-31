@@ -17,6 +17,14 @@
 				     ->get_root()
 				     ->add_section($this);
 			}
+			
+			$this->get_script('config')->set_is_enqueued(false);
+		}
+		
+		public function enqueue_scripts(): void {
+			if (class_exists('WooCommerce')) {
+				$this->get_script('config')->set_is_enqueued(true);
+			}
 		}
 		public function load_settings(): sv_block_woocommerce_product_image {
 			$this->get_setting( 'margin' )
