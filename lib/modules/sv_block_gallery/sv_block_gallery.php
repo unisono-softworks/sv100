@@ -16,7 +16,11 @@
 				->get_root()
 				->add_section( $this );
 		}
-
+		public function enqueue_scripts() {
+			parent::enqueue_scripts();
+			$this->get_script('config')->set_inline()->set_is_enqueued(true);
+			return $this;
+		}
 		public function load_settings(): sv_block_gallery {
 			$this->get_setting( 'spacing' )
 				->set_title( __( 'Spacing', 'sv100' ) )
