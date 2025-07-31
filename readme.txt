@@ -3,7 +3,7 @@ Contributors: matthias-reuter, matthiasbathke, dennisheiden
 Requires PHP: 8.0
 Requires at least: 6.1
 Tested up to: 6.5.5
-Stable tag: 2.1.01
+Stable tag: 2.1.04
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
