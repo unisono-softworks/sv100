@@ -8,6 +8,29 @@
 			"margin": true,
 			"blockGap": true,
 			"units": ["px","em","rem","%","vw","vh"]
+		},
+		"color": {
+			"background": true,
+			"custom": true,
+			"customDuotone": true,
+			"customGradient": true,
+			"defaultDuotone": true,
+			"defaultGradients": true,
+			"defaultPalette": true,
+			"palette": []
+		},
+		"typography": {
+			"fontSizes": [
+				{ "slug": "s", "size": "0.875rem", "name": "Small" },
+				{ "slug": "m", "size": "1rem", "name": "Medium" },
+				{ "slug": "l", "size": "1.5rem", "name": "Large" },
+				{ "slug": "xl", "size": "2rem", "name": "X Large" }
+			],
+			"defaultFontSizes": false
+		},
+		"layout": {
+			"contentSize": "820px",
+			"wideSize": "1560px"
 		}
 	},
 	"templateParts": [
