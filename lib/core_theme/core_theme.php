@@ -36,10 +36,9 @@ class init extends \sv_core\core {
 
 		load_theme_textdomain( 'sv100', get_template_directory() . '/languages' );
 
-		$this->set_section_title( __( 'SV100', 'sv100' ) )
-		->set_section_desc( __( 'SV100 Theme', 'sv100' ) )
-		->set_section_type('')
-			->set_section_privacy( '<p>' . $this->get_section_title() . __(' does not collect or share any data',  'sv100_companion').'</p>' );
+		$this->set_section_title( 'SV100' )
+		->set_section_desc( 'SV100 Theme' )
+		->set_section_type('');
 
 		static::$active_theme_path = trailingslashit( get_stylesheet_directory() );
 		static::$parent_theme_path = trailingslashit( get_template_directory() );
